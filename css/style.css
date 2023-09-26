@@ -1,0 +1,181 @@
+/*when our value is '0' we do not have to specify unit like 'px'
+  the box model: is where we put height, boarder, padding, width interms of static px or percentage CSS!
+  
+  Block elemets: that block the whole width! for instance,
+         paragragns,
+         headers,
+         divisions,
+         lists and list items,
+         forms...
+    to solve this problem we can use "display: inline-block" Element; then we can change width and height along with putting them next to each other  
+  Inline display element: only takes up as much space as it needs to be, but we can not actually change the width!!
+         span, 
+         image, 
+         Anchor ...
+  the last element is "none" inorder to disapear the value, but its better to use "visibility: hidden";  
+  
+  ***********RULES OF CSS POSITIONING/BY DEFAULT!*************
+  1. Content is everything
+  2. Order comes from the html code
+  3. Childer sit on parents; meaning the child sit towards the viewer being closer
+
+  position properties
+       static: position by the html code flow/DEFAULT/
+       relative: relative/giving it a margin/ to the static position ...By co-ordinates; top, bottom, left, right. but this property does not affect any other element thier is a shadow of it!
+       absolute: positioning the element/giving it a margin/ relative to its parent element
+       fixed: in this type, the element stays in the fixed position when we scroll 
+*/
+
+body{
+    color: #40514e;
+    margin: 0;
+    text-align: center; /* this works if there is no width % property in the block element!*/
+    font-family: 'merriweather', serif; /*becarefull while using fonts because what you are seeing here may not be displayed on other computers!*/
+    }
+
+h1{
+    color: #66bfbf;
+    font-size: 5.625rem; /* for conversion purpose: 16px(this is static property) = 100% = 1em(this to are dynamic and will add the size from the parent that maybe dangerous!) but to eliminate that risk we can use "rem" in css3 that is the most adotable and safest!*/
+    margin-top: 0;
+    font-family: 'sacramento', cursive;
+    margin: 50px auto 0 auto;
+}
+
+h2{
+    color: #66bfbf;
+    font-weight: normal;
+    font-family: 'montserrat', sans-serif;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+
+h3{
+    color: #119999;
+    font-family: 'montserrat', sans-serif;
+}
+
+.top-container{
+    background-color: #e4f9f5;
+    position: relative;
+    padding: 100px;
+}
+
+.middle-container{
+    margin: 100px 0;
+}
+
+.bottom-container{
+    background-color: #119999;
+    padding: 50px 0 20px;
+}
+
+.top-cloud{
+    position: absolute;
+    top: 40px;
+    right: 300px;
+}
+
+.bottom-cloud{
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+
+.skill-row{
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+
+/*use float only for wraping text around an image, don't use it for positioning!*/
+.img-one{
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+
+.img-two{
+    width: 25%;
+    float: right;
+    margin-right: 30px;
+}
+
+.p-one{
+    line-height: 2;
+    text-align: center;
+    width: 25%;
+    margin: auto;
+}
+
+hr{
+    border: dotted #eaf6f6 8px;
+    width: 4%;
+    border-bottom: 0;
+    margin: 100px auto;
+}
+
+.contact-me{
+    width: 40%;
+    margin: 40px auto 60px;
+    line-height: 2;
+}
+
+
+.btn {
+    background: #11CDD4;
+    background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+    background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+    background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #30E3CB;
+    background-image: -webkit-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -moz-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -ms-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
+    background-image: linear-gradient(to bottom, #30E3CB, #2BC4AD);
+    text-decoration: none;
+}
+
+P{
+    line-height: 2;
+}
+
+a{
+    color: #064141;
+    font-family: 'montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #eaf6f6;
+}
+
+.copyright{
+    color: #eaf6f6;
+    font-size: 0.85rem;
+    padding: 10px 0;
+}
+/* this is an error code i do know what happened so ...
+.top-cloud{
+    position: absolute;
+    right: 300px;
+    top: 50px;
+}
+
+.bottom-cloud{
+    position: absolute;
+}
